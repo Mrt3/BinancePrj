@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  public values = [];
+
+  constructor(private apiservice: ApiService) { }
 
   ngOnInit() {
+    this.apiservice.getCurrency()
+    .subscribe(data => this.values = data);
   }
+
+
 
 }
