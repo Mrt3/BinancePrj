@@ -1,51 +1,29 @@
 <div class="container-fluid">
   
-    <img width="300"  alt="Angular Logo" src="../assets/2cbDR9FY_400x400.jpg">
+    <img width="300"  alt="Prj Logo" src="../assets/2cbDR9FY_400x400.jpg">
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-        aria-expanded="false" aria-label="Toggle navigation"></button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                    <a class="dropdown-item" href="#">Action 1</a>
-                    <a class="dropdown-item" href="#">Action 2</a>
-                </div>
-            </li>
-        </ul>
-        
-    </div>
+    <a class="navbar-brand" href="#">Home</a>
+   
 </nav>    
 
   <div class="jumbotron">
 
   <div class="panel panel-primary"> </div>
 <div style="text-align:center">
-  <h1>
+  <h1 >
     {{ title }}
   </h1>
 
   <h5>
-    "Bringing Ideas to Life"
+    <i>"Bringing ideas to Life" </i> 
   </h5>
 </div>
 </div>
 <h2> </h2>
-<button [routerLink]="['main']" ngbTooltip="I'll always show you the best prices of Crypto" placement="right">Dive into the CryptoWorld</button>
+<button class="btn-outline-primary btn-sm  badge-pill" id="b1" [routerLink]="['main']" ngbTooltip="I'll always show you the right price of coins" placement="left">Check Currencies</button>
+<button class="btn-outline-info btn-sm  badge-pill" id="b2" [routerLink]="['live']" ngbTooltip="Take a look at the live currency" placement="right">Check Live Data</button>
 
-<div class=""></div>
-<ul>
-  
-</ul>
 
 <router-outlet></router-outlet>
 

@@ -1,13 +1,14 @@
+
 <div class="container">
 
-
-<h1 style="margin-left: 40%">
+<br><br><br><br>
+<h1 class="display-1 badge-primary" >
   Currencies
 </h1>
 
-<table class="table table-bordered table-info ">
+<table class="table table-bordered table-info badge-primary">
   <thead>
-    <tr>
+    <tr class="font-weight-bold font-italic">
       <th>Currency</th>
       <th>Last Price</th>
       <th>24h Volume</th>
@@ -16,8 +17,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let value of values">
-      <td><a [routerLink]="['/detailed']"> {{value.symbol}} </a></td>
+
+    <tr class="badge-pill " (click)="onSelect(value)" *ngFor="let value of values">
+      <td  class="font-weight-bolder" [routerLink]="['/detailed']"> {{value.symbol}} </td>
       <td>{{value.lastPrice}}</td>
       <td>{{value.priceChange}}</td>
       <td>{{value.priceChangePercent}}</td>

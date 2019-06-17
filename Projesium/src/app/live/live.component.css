@@ -1,0 +1,18 @@
+
+#l1{
+    font-size: large;
+    color: blanchedalmond
+}
+
+
+#l2{
+    font-size: large;
+    color: blanchedalmond
+}
+
+@media screen and (max-width: 700px){
+
+    #l2{
+        font-size: small;
+    }
+}

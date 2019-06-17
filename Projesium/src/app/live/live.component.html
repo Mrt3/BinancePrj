@@ -1,0 +1,65 @@
+
+
+<br><br><br><br>
+<div>
+        <h2 class="display-4 badge-pill badge-info">
+          <td>{{msj.sym}}</td>
+        </h2>
+      
+        
+      
+          <table class="table badge-pill badge-info">
+            <thead>
+              <tr class="font-weight-light">
+                <th>Price</th>
+                <th>Avg Price</th>
+                <th>Change</th>
+                <th>Change Percent</th>
+      
+              </tr>
+            </thead>
+      
+            <tbody>
+              <tr id="l1" class="font-weight-bolder">
+                <td>{{msj.lastp}}</td>
+                <td>{{msj.weigh}}</td>
+                <td>{{msj.prch}}</td>
+                <td>{{msj.prchp}}</td>
+      
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      
+        <br><br>
+        <div>
+                <h2 class="display-4 badge-pill badge-info">Trades</h2>
+                
+                  <table class="table table-hover badge-pill badge-info badge-primary">
+                    <thead>
+                      <tr class="font-weight-light">
+                       <th>Best Bid Price</th>
+                       <th>Best Bid Qty</th>
+                       <th>Ask Price</th>
+                       <th>Ask Qty</th>
+                       <th>Trades</th>
+                      </tr>
+                    </thead>
+              
+                    <tbody>
+                      <ng-template #name></ng-template>
+                      
+                      <tr id="l2" class="font-weight-bolder">
+                        
+                      <td>{{msj.bestbid}}</td>
+                      <td>{{msj.bestbidq}}</td> 
+                      <td>{{msj.bestask}}</td>
+                      <td>{{msj.bestaskq}}</td> 
+                      <td>{{msj.numoftrd}}</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+              
+                  </div>
+              

@@ -1,0 +1,23 @@
+#b1{
+    transform: translateX(33em);
+
+}
+
+#b2{
+
+   transform: translateX(42em);
+}
+
+@media screen and (max-width: 700px) {
+
+#b1{
+transform: translateX(9em);
+}
+
+#b2{
+
+    transform: translateY(3em);
+
+}
+
+}

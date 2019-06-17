@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import 'rxjs/add/operator/map';
-import { Observable } from 'rxjs';
-import { ApiService } from '../api.service';
+import { ApiService } from '../services/api.service';
+import { Router } from '@angular/router';
+import { MsgService } from '../services/msg.service';
 
 @Component({
   selector: 'app-main',
@@ -11,15 +11,20 @@ import { ApiService } from '../api.service';
 })
 export class MainComponent implements OnInit {
 
-  public values = [];
+  values=[];
 
-  constructor(private apiservice: ApiService) { }
+  constructor(private apiservice: ApiService, private router: Router, private msgService: MsgService) { }
 
   ngOnInit() {
+
     this.apiservice.getCurrency()
     .subscribe(data => this.values = data);
+
+
   }
 
-
+onSelect(value) {
+this.router.navigate(['/detailed', value.symbol]);
+}
 
 }

@@ -1,36 +1,100 @@
+
+
 <div class="container">
-<nav class="navbar navbar-expand navbar-light bg-light">
-    <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Home</a>
-    </div>
-</nav>
 
-  <h2>Ticker</h2>
+<br><br><br><br>
 
-  <div class="jumbotron">
+<div>
+  <h2 class="display-4 badge-pill badge-info">
+    <td>{{tick.symbol}}</td>
+  </h2>
 
-    
+  
+
+    <table class="table badge-pill badge-info">
+      <thead>
+        <tr class="font-weight-bold">
+          <th>Price</th>
+          <th>Avg Price</th>
+          <th>Change</th>
+          <th>Change Percent</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="font-weight-lighter">
+          <td>{{tick.lastPrice}}</td>
+          <td>{{tick.weightedAvgPrice}}</td>
+          <td>{{tick.priceChange}}</td>
+          <td>{{tick.priceChangePercent}}</td>
+
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <h2>Graph</h2>
+  <br><br>
 
-  <div class="jumbotron">
-  </div>
+  <div>
+  <h2 class="display-4 badge-info">Trade Log</h2>
+  
+    <table class="table table-hover badge-info badge-primary">
+      <thead>
+        <tr class="font-weight-bold">
+         <th>Price</th>
+         <th>Qty</th>
+        </tr>
+      </thead>
 
-  <h2>Trade Log</h2>
-  <div class="jumbotron">
+      <tbody>
+        <ng-template #name></ng-template>
+        
+        <tr class="font-weight-lighter" *ngFor="let value of (values ? values.slice(0,50): [])">
+          
+        <td>{{value.price}}</td>
+        <td>{{value.qty}}</td>          
+        </tr>
+        
+      </tbody>
+    </table>
+
     </div>
 
-  <h2>Orderbook</h2>
-  <div class="jumbotron">
+<br><br>
+
+  <h2 class="display-4 badge-info">Orderbook</h2>
+  <div>
+
+    <table class="table table-hover badge-info badge-primary">
+     <thead>
+        <tr class="font-italic font-weight-bolder">
+            <th>Bids</th>
+            <th>Asks</th>
+           </tr>
+     </thead>
+      <tr class="font-weight-lighter">
+        <td>
+          <table
+            *ngFor="let orders of (order.bids ? order.bids.slice(0,10): [])">
+          <td>{{orders}}</td>
+          </table>
+        </td>
+
+        <td>
+          <table
+            *ngFor="let orders of (order.asks ? order.asks.slice(0,10): [])">
+            <td>{{orders}}</td>
+
+          </table>
+        </td>
+      </tr>
+     
+    </table>
+
+    <br><br>
+
     </div>
-
-
-
-
-
-
-
 
 </div>
+

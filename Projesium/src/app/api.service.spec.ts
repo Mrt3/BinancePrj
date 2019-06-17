@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { ApiService } from './api.service';
+import { ApiService } from './services/api.service';
 
 describe('Service: Api', () => {
   beforeEach(() => {
